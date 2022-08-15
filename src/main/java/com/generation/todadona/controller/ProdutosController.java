@@ -42,7 +42,7 @@ public class ProdutosController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<ProdutosModel> post (@RequestBody @Valid ProdutosModel produto){
+	public ResponseEntity<ProdutosModel> post (@RequestBody ProdutosModel produto){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produto));
 	}
 	
